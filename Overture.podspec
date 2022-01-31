@@ -1,6 +1,8 @@
+version = "0.5.0"
+
 Pod::Spec.new do |s|
   s.name = "Overture"
-  s.version = "0.4.0"
+  s.version = version
   s.summary = "A library for function composition."
 
   s.description = <<-DESC
@@ -21,13 +23,11 @@ Pod::Spec.new do |s|
 
   s.source = {
     :git => "https://github.com/pointfreeco/swift-overture.git",
-    :tag => s.version
+    :tag => version
   }
 
-  s.ios.deployment_target = "8.0"
-  s.osx.deployment_target = "10.9"
-  s.tvos.deployment_target = "9.0"
-  s.watchos.deployment_target = "2.0"
+  s.platform = :ios, "13.0"
+  s.swift_versions = "5.5"
 
   s.source_files  = "Sources", "Sources/**/*.swift"
 end
